@@ -302,15 +302,15 @@ const makeGalleryGrid = (gallery) => {
   gridColumn.classList.add("grid-item");
 
   gallery.forEach((galleryItem) => {
-    const teste1 = document.createElement("div");
-    teste1.classList.add("art");
+    const art = document.createElement("div");
+    art.classList.add("art");
 
     const img = document.createElement("img");
     img.src = galleryItem.images.thumbnail;
 
-    teste1.appendChild(img);
+    art.appendChild(img);
 
-    gridColumn.appendChild(teste1);
+    gridColumn.appendChild(art);
   });
 
   return gridColumn;
@@ -320,9 +320,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const documentFragment = document.createDocumentFragment();
 
   allColumns.forEach((column) => {
-    const teste = makeGalleryGrid(column);
+    const galleryGrid = makeGalleryGrid(column);
 
-    documentFragment.appendChild(teste);
+    documentFragment.appendChild(galleryGrid);
   });
 
   imagesWrapper.appendChild(documentFragment);
