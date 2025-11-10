@@ -305,9 +305,24 @@ const makeGalleryGrid = (gallery) => {
     const art = document.createElement("div");
     art.classList.add("art");
 
+    const artNameAndArtist = document.createElement("div");
+    artNameAndArtist.classList.add("art-name-and-artist");
+
+    const artName = document.createElement("p");
+    artName.classList.add("art-name");
+    artName.textContent = galleryItem.name;
+
+    const artistName = document.createElement("p");
+    artistName.classList.add("artist-name");
+    artistName.textContent = galleryItem.artist.name;
+
+    artNameAndArtist.appendChild(artName);
+    artNameAndArtist.appendChild(artistName);
+
     const img = document.createElement("img");
     img.src = galleryItem.images.thumbnail;
 
+    art.appendChild(artNameAndArtist);
     art.appendChild(img);
 
     gridColumn.appendChild(art);
