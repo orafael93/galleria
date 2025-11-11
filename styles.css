@@ -13,7 +13,6 @@ body {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   margin: 0;
 }
@@ -25,11 +24,6 @@ img {
   padding: 40px;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.galleria-logo {
-  font-weight: bold;
-  font-size: 48px;
 }
 
 .start-slideshow {
