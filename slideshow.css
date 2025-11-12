@@ -1,18 +1,8 @@
-/* MOBILE: UP TO 576px */
-/* TABLET: 577PX - 1250PX */
-/* DESKTOP: 1251PX  */
-
 .slideshow-main-content {
   display: grid;
   grid-template-columns: 6.4fr 3.6fr;
 
   gap: 50px;
-}
-
-@media (min-width: 577px) and (max-width: 1250px) {
-  .slideshow-main-content {
-    grid-template-columns: 1fr;
-  }
 }
 
 .main-image-wrapper {
@@ -32,18 +22,6 @@
   width: 475px;
 }
 
-@media (min-width: 577px) and (max-width: 1250px) {
-  .slideshow-main-image-wrapper {
-    grid-template-columns: 6.9fr 3fr;
-  }
-
-  .main-image-wrapper img.main-image {
-    display: block;
-
-    width: 100%;
-  }
-}
-
 .slideshow-main-image-wrapper .art-content {
   background-color: #fff;
 
@@ -54,14 +32,6 @@
   left: calc(100% - 120px);
 
   padding: 0 75px 65px 65px;
-}
-
-@media (min-width: 577px) and (max-width: 1250px) {
-  .slideshow-main-image-wrapper .art-content {
-    width: 445px;
-
-    left: 50%;
-  }
 }
 
 .slideshow-main-image-wrapper .art-content h3 {
@@ -83,14 +53,8 @@
   bottom: 20px;
   left: 100%;
   margin-left: 30px;
-}
 
-@media (min-width: 577px) and (max-width: 1250px) {
-  .slideshow-main-image-wrapper .artist {
-    top: 231px;
-    margin-left: 0;
-    left: calc(100% + 30px);
-  }
+  width: fit-content;
 }
 
 .art-description {
@@ -111,12 +75,6 @@
   transform: translateY(-100px);
 
   padding-right: 110px;
-}
-
-@media (min-width: 577px) and (max-width: 1250px) {
-  .art-description .art-text-wrapper {
-    padding: 0 110px;
-  }
 }
 
 .art-description .art-text-wrapper p {
@@ -173,12 +131,6 @@ footer .footer-content {
   padding: 0 41px;
 }
 
-@media (max-width: 612px) {
-  footer .footer-content {
-    padding: 0 24px;
-  }
-}
-
 footer .current-slide-art p {
   font-size: 18px;
 
@@ -195,29 +147,12 @@ footer .current-slide-art span {
   margin-top: 8px;
 }
 
-@media (max-width: 612px) {
-  footer .current-slide-art p {
-    font-size: 14px;
-  }
-
-  footer .current-slide-art span {
-    font-size: 10px;
-  }
-}
-
 footer .next-prev-arrows {
   display: flex;
   justify-content: center;
   align-items: center;
 
   gap: 20px;
-}
-
-@media (max-width: 612px) {
-  footer .next-prev-arrows svg {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 footer .next-prev-arrows svg:not(.disabled) {
@@ -237,4 +172,117 @@ footer .next-prev-arrows svg rect {
 footer .next-prev-arrows svg:hover:not(.disabled) path,
 footer .next-prev-arrows svg:hover:not(.disabled) rect {
   stroke: rgba(0, 0, 0, 0.5);
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  footer .current-slide-art p {
+    font-size: 14px;
+  }
+
+  footer .current-slide-art span {
+    font-size: 10px;
+  }
+
+  footer .footer-content {
+    padding: 0 24px;
+  }
+
+  footer .next-prev-arrows svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .slideshow-main-image-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .main-image-wrapper img.main-image {
+    display: block;
+
+    max-width: 100%;
+  }
+
+  .slideshow-main-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .slideshow-main-image-wrapper .art-content {
+    width: 80%;
+
+    position: relative;
+    top: initial;
+    left: 0;
+
+    transform: translateY(-50px);
+
+    padding: 24px;
+  }
+
+  .slideshow-main-image-wrapper .art-name {
+    font-size: 24px;
+  }
+
+  .slideshow-main-image-wrapper .artist-name {
+    margin-top: 8px;
+  }
+
+  .slideshow-main-image-wrapper .artist {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-left: 0;
+
+    transform: translate3d(25px, -50px, 0);
+  }
+
+  .slideshow-main-image-wrapper .artist img {
+    max-width: 64px;
+    max-height: 64px;
+  }
+
+  .art-description .year {
+    font-size: 100px;
+    text-align: right;
+
+    transform: translateY(-80px);
+  }
+
+  .art-description .art-text-wrapper {
+    padding-right: 0;
+  }
+}
+
+/* TABLET */
+@media (min-width: 577px) and (max-width: 1250px) {
+  .slideshow-main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .slideshow-main-image-wrapper {
+    grid-template-columns: 6.9fr 3fr;
+  }
+
+  .main-image-wrapper img.main-image {
+    display: block;
+
+    width: 100%;
+  }
+
+  .slideshow-main-image-wrapper .art-content {
+    width: 445px;
+
+    left: 50%;
+  }
+
+  .slideshow-main-image-wrapper .artist {
+    top: 231px;
+    margin-left: 0;
+    left: calc(100% + 30px);
+  }
+
+  .art-description .art-text-wrapper {
+    padding: 0 110px;
+  }
 }

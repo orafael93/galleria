@@ -21,6 +21,12 @@ header {
   margin-bottom: 81px;
 }
 
+@media (max-width: 576px) {
+  header .logo {
+    width: 100px;
+  }
+}
+
 img {
   display: block;
   margin: 0;
@@ -56,8 +62,6 @@ img {
 .start-slideshow:hover {
   color: #000;
 }
-
-/* MOBILE */
 
 @media (max-width: 576px) {
   .start-slideshow {
