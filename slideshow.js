@@ -1,8 +1,6 @@
 const updateArt = (art) => {
   const mainImage = document.querySelector(".main-image");
 
-  console.log(art);
-
   mainImage.src = art.images.hero.large;
 
   const artContent = document.querySelector(".art-content");
@@ -23,6 +21,13 @@ const updateArt = (art) => {
   artYear.textContent = art.year;
   artText.textContent = art.description;
   source.href = art.source;
+
+  const currentSlideArt = document.querySelector(".current-slide-art");
+  const currentSlideArtName = currentSlideArt.querySelector("p");
+  const currentSlideArtistName = currentSlideArt.querySelector("span");
+
+  currentSlideArtName.textContent = art.name;
+  currentSlideArtistName.textContent = art.artist.name;
 };
 
 export const startSlidedhow = (allArts) => {
@@ -35,7 +40,7 @@ export const startSlidedhow = (allArts) => {
   const footerSlideshow = document.querySelector(".footer-slideshow");
   footerSlideshow.style.display = "block";
 
-  const firstArt = allArts[1];
+  const firstArt = allArts[0];
 
   updateArt(firstArt);
 };
