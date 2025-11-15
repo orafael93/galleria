@@ -1,6 +1,8 @@
 const updateArt = (art) => {
   const mainImage = document.querySelector(".main-image");
 
+  console.log(art);
+
   mainImage.src = art.images.hero.large;
 
   const artContent = document.querySelector(".art-content");
@@ -16,9 +18,11 @@ const updateArt = (art) => {
   const artDescription = document.querySelector(".art-description");
   const artYear = artDescription.querySelector(".year");
   const artText = artDescription.querySelector(".art-text-wrapper p");
+  const source = artDescription.querySelector(".source");
 
   artYear.textContent = art.year;
   artText.textContent = art.description;
+  source.href = art.source;
 };
 
 export const startSlidedhow = (allArts) => {
@@ -31,7 +35,7 @@ export const startSlidedhow = (allArts) => {
   const footerSlideshow = document.querySelector(".footer-slideshow");
   footerSlideshow.style.display = "block";
 
-  const firstArt = allArts[0];
+  const firstArt = allArts[1];
 
   updateArt(firstArt);
 };
