@@ -376,15 +376,15 @@
   }
 
   .slideshow-main-image-wrapper .art-content {
-    width: 445px;
+    width: 100%;
 
-    left: 50%;
+    left: calc(50% - 40px);
   }
 
   .slideshow-main-image-wrapper .artist {
     top: 233px;
     margin-left: 0;
-    left: calc(100% + 30px);
+    left: calc(100% + 20px);
   }
 
   .art-description .art-text-wrapper {
