@@ -1,3 +1,5 @@
+import { startSlidedhow } from "./slideshow.js";
+
 const firstColumn = [
   {
     name: "Starry Night",
@@ -293,6 +295,13 @@ const fourthColumn = [
   },
 ];
 
+const allArts = [
+  ...firstColumn,
+  ...secondColumn,
+  ...thirdColumn,
+  ...firstColumn,
+];
+
 const allColumns = [firstColumn, secondColumn, thirdColumn, fourthColumn];
 
 const imagesWrapper = document.querySelector(".images-wrapper");
@@ -342,3 +351,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   imagesWrapper.appendChild(documentFragment);
 });
+
+const startSlideshowButton = document.querySelector(".start-slideshow");
+
+if (startSlideshowButton) {
+  startSlideshowButton.dataset.active_slideshow = false;
+
+  startSlideshowButton.addEventListener("click", () => {
+    startSlideshowButton.dataset.active_slideshow =
+      startSlideshowButton.dataset.active_slideshow === "false" ? true : false;
+
+    startSlideshowButton.textContent =
+      startSlideshowButton.dataset.active_slideshow === "true"
+        ? "PAUSE SLIDESHOW"
+        : "START SLIDESHOW";
+
+    startSlidedhow(allArts);
+  });
+}
