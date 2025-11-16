@@ -30,8 +30,33 @@ const updateArt = (art) => {
   currentSlideArtistName.textContent = art.artist.name;
 };
 
+const handleCloseGalleryArt = () => {
+  const overlay = document.querySelector(".overlay");
+  const closeArt = document.querySelector(".close-art");
+
+  closeArt.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+};
+
+const handleShowGalleryArt = (art) => {
+  const viewImage = document.querySelector(".view-image");
+  const overlay = document.querySelector(".overlay");
+  const overlayImage = overlay.querySelector("img");
+
+  viewImage.addEventListener("click", () => {
+    overlay.style.display = "block";
+
+    overlayImage.src = art.images.hero.large;
+
+    handleCloseGalleryArt();
+  });
+};
+
 export const startSlidedhow = (allArts) => {
-  const firstArt = allArts[0];
+  const firstArt = allArts[3];
 
   updateArt(firstArt);
+
+  handleShowGalleryArt(firstArt);
 };
