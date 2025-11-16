@@ -355,16 +355,20 @@ document.addEventListener("DOMContentLoaded", () => {
 const startSlideshowButton = document.querySelector(".start-slideshow");
 
 if (startSlideshowButton) {
-  startSlideshowButton.dataset.active_slideshow = false;
+  document.documentElement.dataset.active_slideshow = false;
 
   startSlideshowButton.addEventListener("click", () => {
-    startSlideshowButton.dataset.active_slideshow =
-      startSlideshowButton.dataset.active_slideshow === "false" ? true : false;
+    document.documentElement.dataset.active_slideshow =
+      document.documentElement.dataset.active_slideshow === "true"
+        ? false
+        : true;
 
-    startSlideshowButton.textContent =
-      startSlideshowButton.dataset.active_slideshow === "true"
-        ? "PAUSE SLIDESHOW"
-        : "START SLIDESHOW";
+    const isSlideshowActive =
+      document.documentElement.dataset.active_slideshow === "true";
+
+    startSlideshowButton.textContent = isSlideshowActive
+      ? "PAUSE SLIDESHOW"
+      : "START SLIDESHOW";
 
     startSlidedhow(allArts);
   });

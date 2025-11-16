@@ -126,3 +126,27 @@ img {
 .art-name-and-artist p {
   color: #fff;
 }
+
+[data-active_slideshow="false"] {
+  .footer-slideshow {
+    display: none;
+  }
+
+  .slideshow {
+    display: none;
+  }
+}
+
+[data-active_slideshow="true"] {
+  .images-wrapper {
+    display: none;
+  }
+
+  .slideshow {
+    display: block;
+  }
+
+  .footer-slideshow {
+    display: block;
+  }
+}

@@ -31,15 +31,6 @@ const updateArt = (art) => {
 };
 
 export const startSlidedhow = (allArts) => {
-  const imagesWrapper = document.querySelector(".images-wrapper");
-  imagesWrapper.style.display = "none";
-
-  const slideshow = document.querySelector(".slideshow");
-  slideshow.style.display = "block";
-
-  const footerSlideshow = document.querySelector(".footer-slideshow");
-  footerSlideshow.style.display = "block";
-
   const firstArt = allArts[0];
 
   updateArt(firstArt);
