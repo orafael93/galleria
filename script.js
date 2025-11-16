@@ -1,7 +1,8 @@
-import { startSlidedhow } from "./slideshow.js";
+import { startSlideshow, handleSlideshowDataSets } from "./slideshow.js";
 
 const firstColumn = [
   {
+    id: 1,
     name: "Starry Night",
     year: 1889,
     description:
@@ -21,6 +22,7 @@ const firstColumn = [
     },
   },
   {
+    id: 5,
     name: "The Storm on the Sea of Galilee",
     year: 1633,
     description:
@@ -40,6 +42,7 @@ const firstColumn = [
     },
   },
   {
+    id: 9,
     name: "Lady with an Ermine",
     year: 1489,
     description:
@@ -59,6 +62,7 @@ const firstColumn = [
     },
   },
   {
+    id: 13,
     name: "The Boy in the Red Vest",
     year: 1889,
     description:
@@ -80,6 +84,7 @@ const firstColumn = [
 ];
 const secondColumn = [
   {
+    id: 2,
     name: "Girl with a Pearl Earring",
     year: 1665,
     description:
@@ -99,6 +104,7 @@ const secondColumn = [
     },
   },
   {
+    id: 6,
     name: "The Great Wave off Kanagawa",
     year: 1831,
     description:
@@ -118,6 +124,7 @@ const secondColumn = [
     },
   },
   {
+    id: 10,
     name: "The Night Café",
     year: 1888,
     description:
@@ -137,6 +144,7 @@ const secondColumn = [
     },
   },
   {
+    id: 14,
     name: "Arnolfini Portrait",
     year: 1434,
     description:
@@ -158,6 +166,7 @@ const secondColumn = [
 ];
 const thirdColumn = [
   {
+    id: 3,
     name: "Guernica",
     year: 1937,
     description:
@@ -177,6 +186,7 @@ const thirdColumn = [
     },
   },
   {
+    id: 7,
     name: "Van Gogh Self-portrait",
     year: 1889,
     description:
@@ -196,6 +206,7 @@ const thirdColumn = [
     },
   },
   {
+    id: 11,
     name: "Mona Lisa",
     year: 1503,
     description:
@@ -215,8 +226,10 @@ const thirdColumn = [
     },
   },
 ];
+
 const fourthColumn = [
   {
+    id: 4,
     name: "Penitent Magdalene",
     year: 1625,
     description:
@@ -237,6 +250,7 @@ const fourthColumn = [
     },
   },
   {
+    id: 8,
     name: "The Sleeping Gypsy",
     year: 1897,
     description:
@@ -256,6 +270,7 @@ const fourthColumn = [
     },
   },
   {
+    id: 12,
     name: "The Basket of Apples",
     year: 1893,
     description:
@@ -275,6 +290,7 @@ const fourthColumn = [
     },
   },
   {
+    id: 15,
     name: "The Swing",
     year: 1767,
     description:
@@ -299,37 +315,45 @@ const allArts = [
   ...firstColumn,
   ...secondColumn,
   ...thirdColumn,
-  ...firstColumn,
+  ...fourthColumn,
 ];
 
 const allColumns = [firstColumn, secondColumn, thirdColumn, fourthColumn];
 
 const imagesWrapper = document.querySelector(".images-wrapper");
+const startSlideshowButton = document.querySelector(".start-slideshow");
 
 const makeGalleryGrid = (gallery) => {
   const gridColumn = document.createElement("div");
   gridColumn.classList.add("grid-item");
 
-  gallery.forEach((galleryItem) => {
+  gallery.forEach((currentGallery) => {
     const art = document.createElement("div");
     art.classList.add("art");
+
+    art.addEventListener("click", () => {
+      startSlideshow(currentGallery);
+      scrollTo({
+        top: 0,
+      });
+    });
 
     const artNameAndArtist = document.createElement("div");
     artNameAndArtist.classList.add("art-name-and-artist");
 
     const artName = document.createElement("p");
     artName.classList.add("art-name");
-    artName.textContent = galleryItem.name;
+    artName.textContent = currentGallery.name;
 
     const artistName = document.createElement("p");
     artistName.classList.add("artist-name");
-    artistName.textContent = galleryItem.artist.name;
+    artistName.textContent = currentGallery.artist.name;
 
     artNameAndArtist.appendChild(artName);
     artNameAndArtist.appendChild(artistName);
 
     const img = document.createElement("img");
-    img.src = galleryItem.images.thumbnail;
+    img.src = currentGallery.images.thumbnail;
 
     art.appendChild(artNameAndArtist);
     art.appendChild(img);
@@ -352,24 +376,14 @@ document.addEventListener("DOMContentLoaded", () => {
   imagesWrapper.appendChild(documentFragment);
 });
 
-const startSlideshowButton = document.querySelector(".start-slideshow");
+const handleSlideshow = () => {
+  if (startSlideshowButton) {
+    document.documentElement.dataset.active_slideshow = false;
 
-if (startSlideshowButton) {
-  document.documentElement.dataset.active_slideshow = false;
+    startSlideshowButton.addEventListener("click", () => {
+      startSlideshow(allArts[0]);
+    });
+  }
+};
 
-  startSlideshowButton.addEventListener("click", () => {
-    document.documentElement.dataset.active_slideshow =
-      document.documentElement.dataset.active_slideshow === "true"
-        ? false
-        : true;
-
-    const isSlideshowActive =
-      document.documentElement.dataset.active_slideshow === "true";
-
-    startSlideshowButton.textContent = isSlideshowActive
-      ? "PAUSE SLIDESHOW"
-      : "START SLIDESHOW";
-
-    startSlidedhow(allArts);
-  });
-}
+handleSlideshow();

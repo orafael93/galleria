@@ -1,4 +1,18 @@
-const updateArt = (art) => {
+export const handleSlideshowDataSets = () => {
+  const startSlideshowButton = document.querySelector(".start-slideshow");
+
+  document.documentElement.dataset.active_slideshow =
+    document.documentElement.dataset.active_slideshow === "true" ? false : true;
+
+  const isSlideshowActive =
+    document.documentElement.dataset.active_slideshow === "true";
+
+  startSlideshowButton.textContent = isSlideshowActive
+    ? "pause slideshow"
+    : "start slideshow";
+};
+
+export const updateArt = (art) => {
   const mainImage = document.querySelector(".main-image");
 
   mainImage.src = art.images.hero.large;
@@ -30,7 +44,7 @@ const updateArt = (art) => {
   currentSlideArtistName.textContent = art.artist.name;
 };
 
-const handleCloseGalleryArt = () => {
+export const handleCloseGalleryArt = () => {
   const overlay = document.querySelector(".overlay");
   const closeArt = document.querySelector(".close-art");
 
@@ -39,7 +53,7 @@ const handleCloseGalleryArt = () => {
   });
 };
 
-const handleShowGalleryArt = (art) => {
+export const handleShowGalleryArt = (art) => {
   const viewImage = document.querySelector(".view-image");
   const overlay = document.querySelector(".overlay");
   const overlayImage = overlay.querySelector("img");
@@ -53,10 +67,8 @@ const handleShowGalleryArt = (art) => {
   });
 };
 
-export const startSlidedhow = (allArts) => {
-  const firstArt = allArts[3];
-
-  updateArt(firstArt);
-
-  handleShowGalleryArt(firstArt);
+export const startSlideshow = (art) => {
+  handleSlideshowDataSets();
+  updateArt(art);
+  handleShowGalleryArt(art);
 };
