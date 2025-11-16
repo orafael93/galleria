@@ -114,6 +114,24 @@ img {
   bottom: 0;
 
   padding: 32px;
+}
+
+.art-name-and-artist .art-name,
+.art-name-and-artist .artist-name {
+  z-index: 1;
+}
+
+.art-name-and-artist::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
 
   background: linear-gradient(
     180deg,
@@ -125,6 +143,16 @@ img {
 
 .art-name-and-artist p {
   color: #fff;
+}
+
+.art-name-and-artist .art-name {
+  font-size: 24px;
+}
+
+.art-name-and-artist .artist-name {
+  margin-top: 7px;
+  font-size: 13px;
+  color: #e1e1e1;
 }
 
 [data-active_slideshow="false"] {
