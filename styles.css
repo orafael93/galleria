@@ -63,20 +63,6 @@ img {
   color: #000;
 }
 
-@media (max-width: 576px) {
-  .start-slideshow {
-    font-size: 9px;
-  }
-
-  header {
-    margin-bottom: 48px;
-  }
-
-  .container {
-    padding: 24px;
-  }
-}
-
 .images-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -176,5 +162,23 @@ img {
 
   .footer-slideshow {
     display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .start-slideshow {
+    font-size: 9px;
+  }
+
+  header {
+    margin-bottom: 48px;
+  }
+
+  .container {
+    padding: 24px;
+  }
+
+  .images-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   }
 }

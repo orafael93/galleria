@@ -1,5 +1,3 @@
-const currentSlide = null;
-
 export const handleSlideshowDataSets = () => {
   const startSlideshowButton = document.querySelector(".start-slideshow");
 
@@ -12,6 +10,8 @@ export const handleSlideshowDataSets = () => {
   startSlideshowButton.textContent = isSlideshowActive
     ? "pause slideshow"
     : "start slideshow";
+
+  return document.documentElement.dataset.active_slideshow === "true";
 };
 
 const handleLeftArrowState = (art) => {
@@ -81,6 +81,18 @@ export const handleShowGalleryArt = (art) => {
 
     handleCloseGalleryArt();
   });
+};
+
+export const handleSlideShow = () => {
+  const startSlideshow = (art) => {
+    updateArt(art);
+    handleShowGalleryArt(art);
+  };
+
+  return {
+    startSlideshow,
+    canShowSlideshow: handleSlideshowDataSets,
+  };
 };
 
 export const startSlideshow = (art) => {

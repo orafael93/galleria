@@ -1,4 +1,4 @@
-import { startSlideshow, handleSlideshowDataSets } from "./slideshow.js";
+import { handleSlideShow } from "./slideshow.js";
 
 const firstColumn = [
   {
@@ -320,10 +320,14 @@ const allArts = [
 
 const allColumns = [firstColumn, secondColumn, thirdColumn, fourthColumn];
 
+document.documentElement.dataset.active_slideshow = false;
+
 const imagesWrapper = document.querySelector(".images-wrapper");
 const startSlideshowButton = document.querySelector(".start-slideshow");
 
 const makeGalleryGrid = (gallery) => {
+  const { canShowSlideshow, startSlideshow } = handleSlideShow();
+
   const gridColumn = document.createElement("div");
   gridColumn.classList.add("grid-item");
 
@@ -332,10 +336,12 @@ const makeGalleryGrid = (gallery) => {
     art.classList.add("art");
 
     art.addEventListener("click", () => {
-      startSlideshow(currentGallery);
-      scrollTo({
-        top: 0,
-      });
+      if (canShowSlideshow()) {
+        startSlideshow(currentGallery);
+        scrollTo({
+          top: 0,
+        });
+      }
     });
 
     const artNameAndArtist = document.createElement("div");
@@ -378,10 +384,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const handleSlideshow = () => {
   if (startSlideshowButton) {
-    document.documentElement.dataset.active_slideshow = false;
-
     startSlideshowButton.addEventListener("click", () => {
-      startSlideshow(allArts[0]);
+      const { canShowSlideshow, startSlideshow } = handleSlideShow();
+
+      if (canShowSlideshow()) {
+        startSlideshow(allArts[0]);
+      }
     });
   }
 };
