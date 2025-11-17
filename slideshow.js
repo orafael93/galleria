@@ -1,3 +1,5 @@
+const currentSlide = null;
+
 export const handleSlideshowDataSets = () => {
   const startSlideshowButton = document.querySelector(".start-slideshow");
 
@@ -10,6 +12,18 @@ export const handleSlideshowDataSets = () => {
   startSlideshowButton.textContent = isSlideshowActive
     ? "pause slideshow"
     : "start slideshow";
+};
+
+const handleLeftArrowState = (art) => {
+  const prevArrow = document.querySelector(".prev-arrow");
+
+  if (art.id === 1) {
+    prevArrow.classList.add("disabled");
+  }
+
+  if (art.id !== 1 && prevArrow.classList.contains("disabled")) {
+    prevArrow.classList.remove("disabled");
+  }
 };
 
 export const updateArt = (art) => {
@@ -42,6 +56,8 @@ export const updateArt = (art) => {
 
   currentSlideArtName.textContent = art.name;
   currentSlideArtistName.textContent = art.artist.name;
+
+  handleLeftArrowState(art);
 };
 
 export const handleCloseGalleryArt = () => {
