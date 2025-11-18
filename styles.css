@@ -19,17 +19,12 @@ header {
   align-items: center;
 
   margin-bottom: 81px;
-}
 
-@media (max-width: 576px) {
-  header .logo {
-    width: 100px;
-  }
+  padding: 20px;
 }
 
 img {
   display: block;
-  margin: 0;
 }
 
 .container {
@@ -63,24 +58,26 @@ img {
   color: #000;
 }
 
-.images-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-}
-
 .images-wrapper img {
   display: block;
   width: 100%;
-  max-width: 100%;
   margin: 0;
 }
 
+.images-wrapper {
+  position: relative;
+}
+
 .grid-item {
+  position: absolute;
+  top: 0;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 40px;
+
+  cursor: pointer;
+
+  padding: 20px;
 }
 
 .art {
@@ -94,10 +91,9 @@ img {
   justify-content: center;
 
   position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
 
   padding: 32px;
 }
@@ -127,11 +123,8 @@ img {
   );
 }
 
-.art-name-and-artist p {
-  color: #fff;
-}
-
 .art-name-and-artist .art-name {
+  color: #fff;
   font-size: 24px;
 }
 
@@ -172,6 +165,10 @@ img {
 
   header {
     margin-bottom: 48px;
+  }
+
+  header .logo {
+    width: 100px;
   }
 
   .container {
