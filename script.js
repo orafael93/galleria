@@ -321,10 +321,9 @@ const handleSlideshow = () => {
   }
 };
 
-handleSlideshow();
-
 window.addEventListener("DOMContentLoaded", () => {
   initializeMasonryGrid();
+  handleSlideshow();
 
   window.addEventListener("resize", createMasonryGrid);
 });
