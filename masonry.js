@@ -55,7 +55,7 @@ const createGridItems = async (gridItems) => {
   gridContainer.appendChild(fragment);
 };
 
-const createMasonryGrid = () => {
+export const createMasonryGrid = () => {
   const containerWidth = gridContainer.clientWidth;
 
   const minGridItemSize =
@@ -85,7 +85,7 @@ const createMasonryGrid = () => {
   gridContainer.style.height = `${Math.max(...columnHeight)}px`;
 };
 
-const initializeMasonryGrid = async () => {
+export const initializeMasonryGrid = async () => {
   createGridItems(galleryData);
 
   const allGridItemElements = document.querySelectorAll(".grid-item");
@@ -104,9 +104,3 @@ const initializeMasonryGrid = async () => {
 
   createMasonryGrid();
 };
-
-window.addEventListener("DOMContentLoaded", () => {
-  initializeMasonryGrid();
-
-  window.addEventListener("resize", createMasonryGrid);
-});

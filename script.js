@@ -1,3 +1,4 @@
+import { createMasonryGrid, initializeMasonryGrid } from "./masonry.js";
 import { handleSlideShow } from "./slideshow.js";
 
 export const galleryData = [
@@ -321,3 +322,9 @@ const handleSlideshow = () => {
 };
 
 handleSlideshow();
+
+window.addEventListener("DOMContentLoaded", () => {
+  initializeMasonryGrid();
+
+  window.addEventListener("resize", createMasonryGrid);
+});
