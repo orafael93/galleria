@@ -1,3 +1,5 @@
+export let currentArt = null;
+
 export const handleSlideshowDataSets = () => {
   const startSlideshowButton = document.querySelector(".start-slideshow");
 
@@ -27,6 +29,8 @@ const handleLeftArrowState = (art) => {
 };
 
 export const updateArt = (art) => {
+  currentArt = art;
+
   const mainImage = document.querySelector(".main-image");
 
   mainImage.src = art.images.hero.large;
@@ -99,4 +103,26 @@ export const startSlideshow = (art) => {
   handleSlideshowDataSets();
   updateArt(art);
   handleShowGalleryArt(art);
+};
+
+export const handleNavigateBetweenSlideshows = () => {
+  const prevArrow = document.querySelector(".prev-arrow");
+  const nextArrow = document.querySelector(".next-arrow");
+
+  const goToPrevSlideshow = () => {};
+
+  const goToNextSlideshow = () => {};
+
+  if (prevArrow) {
+    prevArrow.addEventListener("click", goToPrevSlideshow);
+  }
+
+  if (nextArrow) {
+    nextArrow.addEventListener("click", goToNextSlideshow);
+  }
+
+  return {
+    goToNextSlideshow,
+    goToPrevSlideshow,
+  };
 };
