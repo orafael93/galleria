@@ -111,15 +111,15 @@ export const handleNavigateBetweenSlideshows = () => {
   const prevArrow = document.querySelector(".prev-arrow");
   const nextArrow = document.querySelector(".next-arrow");
 
+  const getArtToGo = (modifier) => galleryData[getCurrentArtIndex() + modifier];
+
   const getCurrentArtIndex = () =>
     galleryData.findIndex(
       (galleryDataArt) => galleryDataArt.id === currentArt.id
     );
 
   const goToPrevSlideshow = () => {
-    const currentArtIndex = getCurrentArtIndex();
-
-    const prevArt = galleryData[currentArtIndex - 1];
+    const prevArt = getArtToGo(-1);
 
     if (prevArt) {
       updateArt(prevArt);
@@ -127,9 +127,7 @@ export const handleNavigateBetweenSlideshows = () => {
   };
 
   const goToNextSlideshow = () => {
-    const currentArtIndex = getCurrentArtIndex();
-
-    const nextArt = galleryData[currentArtIndex + 1];
+    const nextArt = getArtToGo(+1);
 
     if (nextArt) {
       updateArt(nextArt);
