@@ -122,6 +122,11 @@ export const handleNavigateBetweenSlideshows = () => {
     const prevArt = getArtToGo(-1);
 
     if (prevArt) {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
       updateArt(prevArt);
     }
   };
@@ -130,6 +135,10 @@ export const handleNavigateBetweenSlideshows = () => {
     const nextArt = getArtToGo(+1);
 
     if (nextArt) {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
       updateArt(nextArt);
     }
   };
