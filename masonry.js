@@ -45,6 +45,7 @@ const createGridItems = async (gridItems) => {
     const artThumbnail = new Image();
 
     artThumbnail.src = currentGridItem.images.thumbnail;
+    artThumbnail.setAttribute("loading", "lazy");
 
     gridItem.appendChild(artThumbnail);
     gridItem.appendChild(artistContent);
