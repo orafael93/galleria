@@ -1,5 +1,5 @@
 import { galleryData } from "./script.js";
-import { handleSlideShow } from "./slideshow.js";
+import { slideshow } from "./slideshow.js";
 
 const gridContainer = document.querySelector(".images-wrapper");
 
@@ -10,20 +10,16 @@ const createGridItems = async (gridItems) => {
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < gridItems.length; i++) {
-    const { canShowSlideshow, startSlideshow } = handleSlideShow();
-
     const currentGridItem = gridItems[i];
 
     const gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
 
     gridItem.addEventListener("click", () => {
-      if (canShowSlideshow()) {
-        startSlideshow(currentGridItem);
-        scrollTo({
-          top: 0,
-        });
-      }
+      slideshow.startSlideshow(currentGridItem);
+      scrollTo({
+        top: 0,
+      });
     });
 
     gridItem.dataset.artName = getDatasetToGridItem(currentGridItem);

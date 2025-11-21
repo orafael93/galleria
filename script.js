@@ -1,8 +1,5 @@
 import { createMasonryGrid, initializeMasonryGrid } from "./masonry.js";
-import {
-  handleNavigateBetweenSlideshows,
-  handleSlideShow,
-} from "./slideshow.js";
+import { slideshow } from "./slideshow.js";
 
 export const galleryData = [
   {
@@ -310,24 +307,17 @@ export const galleryData = [
 
 document.documentElement.dataset.active_slideshow = false;
 
-const startSlideshowButton = document.querySelector(".start-slideshow");
+window.addEventListener("DOMContentLoaded", () => {
+  const startSlideshowButton = document.querySelector(".start-slideshow");
 
-const handleSlideshow = () => {
+  initializeMasonryGrid();
+  slideshow.handleNavigateBetweenSlideshows();
+
   if (startSlideshowButton) {
     startSlideshowButton.addEventListener("click", () => {
-      const { canShowSlideshow, startSlideshow } = handleSlideShow();
-
-      if (canShowSlideshow()) {
-        startSlideshow(galleryData[0]);
-      }
+      slideshow.startSlideshow(galleryData[0]);
     });
   }
-};
-
-window.addEventListener("DOMContentLoaded", () => {
-  initializeMasonryGrid();
-  handleSlideshow();
-  handleNavigateBetweenSlideshows();
 
   window.addEventListener("resize", createMasonryGrid);
 });
