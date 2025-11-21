@@ -71,7 +71,7 @@ export const createMasonryGrid = () => {
   const columnHeight = Array.from({ length: gridColumns }).fill(0);
 
   allGridItems.forEach((gridItem) => {
-    gridItem.style.width = `${gridItemSize}px`;
+    gridItem.style.width = `calc(min(${gridItemSize}px, 100%))`;
 
     const minColumnHeight = columnHeight.indexOf(Math.min(...columnHeight));
 
