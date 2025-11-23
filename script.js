@@ -1,4 +1,4 @@
-import { createMasonryGrid, initializeMasonryGrid } from "./masonry.js";
+import { createMasonryGrid, initializeGallery } from "./masonry.js";
 import { slideshow } from "./slideshow.js";
 
 export const galleryData = [
@@ -310,8 +310,9 @@ document.documentElement.dataset.active_slideshow = false;
 window.addEventListener("DOMContentLoaded", () => {
   const startSlideshowButton = document.querySelector(".start-slideshow");
 
-  initializeMasonryGrid();
   slideshow.handleNavigateBetweenSlideshows();
+
+  initializeGallery();
 
   if (startSlideshowButton) {
     startSlideshowButton.addEventListener("click", () => {
