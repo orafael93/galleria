@@ -3,6 +3,8 @@ import { galleryData } from "./script.js";
 class HandleSlideShow {
   constructor() {
     this.currentArt = null;
+    this.slideshowTimer = 0;
+    this.intervalTimerId = null;
   }
 
   canShowSlideshow() {
@@ -27,6 +29,16 @@ class HandleSlideShow {
     if (this.canShowSlideshow()) {
       this.updateArt(art);
       this.handleShowGalleryArt(art);
+
+      this.intervalTimerId = setInterval(() => {
+        this.slideshowTimer += 1;
+      }, 1000);
+
+      return;
+    }
+
+    if (this.intervalTimerId) {
+      clearInterval(this.intervalTimerId);
     }
   }
 
