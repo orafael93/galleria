@@ -14,6 +14,7 @@ const createGridItems = async (gridItems) => {
 
     const gridItem = document.createElement("div");
     gridItem.classList.add("grid-item");
+    gridItem.style.opacity = 0;
 
     gridItem.addEventListener("click", () => {
       slideshow.startSlideshow(currentGridItem);
@@ -82,7 +83,7 @@ export const createMasonryGrid = () => {
   gridContainer.style.height = `${Math.max(...columnHeight)}px`;
 };
 
-export const initializeMasonryGrid = async () => {
+export const initializeGallery = async () => {
   createGridItems(galleryData);
 
   const allGridItemElements = document.querySelectorAll(".grid-item");
@@ -92,6 +93,8 @@ export const initializeMasonryGrid = async () => {
 
     return new Promise((resolve) => {
       gridItemFirstChild.onload = () => {
+        gridItem.style.opacity = 1;
+
         resolve(gridItem);
       };
     });
