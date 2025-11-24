@@ -5,6 +5,8 @@ class HandleSlideShow {
     this.currentArt = null;
     this.slideshowTimer = 0;
     this.intervalTimerId = null;
+
+    this.createOverlayContent();
   }
 
   canShowSlideshow() {
@@ -158,6 +160,33 @@ class HandleSlideShow {
     if (nextArrow) {
       nextArrow.addEventListener("click", goToNextSlideshow);
     }
+  }
+
+  createOverlayContent() {
+    const container = document.querySelector(".container");
+
+    const overlayWrapper = document.createElement("div");
+    overlayWrapper.classList.add("overlay");
+
+    const artContent = document.createElement("div");
+    artContent.classList.add("art-content");
+
+    overlayWrapper.appendChild(artContent);
+
+    const art = document.createElement("div");
+    art.classList.add("art");
+
+    const closeArt = document.createElement("span");
+    closeArt.classList.add("close-art");
+    closeArt.textContent = "Close";
+
+    const imageGallery = document.createElement("img");
+
+    art.appendChild(closeArt);
+    art.appendChild(imageGallery);
+    artContent.appendChild(art);
+
+    container.insertAdjacentElement("afterend", overlayWrapper);
   }
 }
 
