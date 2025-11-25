@@ -179,3 +179,17 @@ export const theSwing = {
   heroLarge: TheSwingHeroLarge,
   gallery: TheSwingGallery,
 };
+
+import ArnolfiniPortraitArtist from "../public/arnolfini-portrait/artist.jpg";
+import ArnolfiniPortraitThumbnail from "../public/arnolfini-portrait/thumbnail.jpg";
+import ArnolfiniPortraitHeroSmall from "../public/arnolfini-portrait/hero-small.jpg";
+import ArnolfiniPortraitHeroLarge from "../public/arnolfini-portrait/hero-large.jpg";
+import ArnolfiniPortraitGallery from "../public/arnolfini-portrait/gallery.jpg";
+
+export const arnolfiniPortrait = {
+  artist: ArnolfiniPortraitArtist,
+  thumbnail: ArnolfiniPortraitThumbnail,
+  heroSmall: ArnolfiniPortraitHeroSmall,
+  heroLarge: ArnolfiniPortraitHeroLarge,
+  gallery: ArnolfiniPortraitGallery,
+};

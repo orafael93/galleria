@@ -14,6 +14,7 @@ import {
   theNightCafe,
   monaLisa,
   theSwing,
+  arnolfiniPortrait,
 } from "./images.js";
 
 import "./styles.css";
@@ -280,26 +281,26 @@ export const galleryData = [
       gallery: theSwing.gallery,
     },
   },
-  // {
-  //   id: 14,
-  //   name: "Arnolfini Portrait",
-  //   year: 1434,
-  //   description:
-  //     "It is considered one of the most original and complex paintings in Western art, because of its beauty, complex iconography, geometric orthogonal perspective, and expansion of the picture space with the use of a mirror. According to Ernst Gombrich \"in its own way it was as new and revolutionary as Donatello's or Masaccio's work in Italy. A simple corner of the real world had suddenly been fixed on to a panel as if by magic ... For the first time in history the artist became the perfect eye-witness in the truest sense of the term\".",
-  //   source: "https://en.wikipedia.org/wiki/Arnolfini_Portrait",
-  //   artist: {
-  //     image: "/arnolfini-portrait/artist.jpg",
-  //     name: "Jan van Eyck",
-  //   },
-  //   images: {
-  //     thumbnail: "/arnolfini-portrait/thumbnail.jpg",
-  //     hero: {
-  //       small: "/arnolfini-portrait/hero-small.jpg",
-  //       large: "/arnolfini-portrait/hero-large.jpg",
-  //     },
-  //     gallery: "/arnolfini-portrait/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 14,
+    name: "Arnolfini Portrait",
+    year: 1434,
+    description:
+      "It is considered one of the most original and complex paintings in Western art, because of its beauty, complex iconography, geometric orthogonal perspective, and expansion of the picture space with the use of a mirror. According to Ernst Gombrich \"in its own way it was as new and revolutionary as Donatello's or Masaccio's work in Italy. A simple corner of the real world had suddenly been fixed on to a panel as if by magic ... For the first time in history the artist became the perfect eye-witness in the truest sense of the term\".",
+    source: "https://en.wikipedia.org/wiki/Arnolfini_Portrait",
+    artist: {
+      image: arnolfiniPortrait.artist,
+      name: "Jan van Eyck",
+    },
+    images: {
+      thumbnail: arnolfiniPortrait.thumbnail,
+      hero: {
+        small: arnolfiniPortrait.heroSmall,
+        large: arnolfiniPortrait.heroLarge,
+      },
+      gallery: arnolfiniPortrait.gallery,
+    },
+  },
   // {
   //   id: 15,
   //   name: "The Boy in the Red Vest",
