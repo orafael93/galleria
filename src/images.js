@@ -67,3 +67,17 @@ export const theStormOnTheSeaOfGalilee = {
   heroLarge: TheStormOnTheSeaOfGalileeHeroLarge,
   gallery: TheStormOnTheSeaOfGalileeGallery,
 };
+
+import TheSleepingGypsyArtist from "../public/the-sleeping-gypsy/artist.jpg";
+import TheSleepingGypsyThumbnail from "../public/the-sleeping-gypsy/thumbnail.jpg";
+import TheSleepingGypsyHeroSmall from "../public/the-sleeping-gypsy/hero-small.jpg";
+import TheSleepingGypsyHeroLarge from "../public/the-sleeping-gypsy/hero-large.jpg";
+import TheSleepingGypsyGallery from "../public/the-sleeping-gypsy/gallery.jpg";
+
+export const theSleepingGypsy = {
+  artist: TheSleepingGypsyArtist,
+  thumbnail: TheSleepingGypsyThumbnail,
+  heroSmall: TheSleepingGypsyHeroSmall,
+  heroLarge: TheSleepingGypsyHeroLarge,
+  gallery: TheSleepingGypsyGallery,
+};

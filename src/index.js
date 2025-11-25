@@ -6,6 +6,7 @@ import {
   guernica,
   penitentMagdalene,
   theStormOnTheSeaOfGalilee,
+  theSleepingGypsy,
 } from "./images.js";
 
 import "./styles.css";
@@ -112,26 +113,26 @@ export const galleryData = [
       gallery: theStormOnTheSeaOfGalilee.gallery,
     },
   },
-  // {
-  //   id: 6,
-  //   name: "The Sleeping Gypsy",
-  //   year: 1897,
-  //   description:
-  //     "The Sleeping Gypsy (French: La Bohémienne endormie) is an 1897 oil painting by French Naïve artist Henri Rousseau (1844–1910). It is a fantastical depiction of a lion musing over a sleeping woman on a moonlit night. Rousseau first exhibited the painting at the 13th Salon des Indépendants, and tried unsuccessfully to sell it to the mayor of his hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant where it remained until 1924, when it was discovered by the art critic Louis Vauxcelles.",
-  //   source: "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
-  //   artist: {
-  //     image: "/the-sleeping-gypsy/artist.jpg",
-  //     name: "Henri Rousseau",
-  //   },
-  //   images: {
-  //     thumbnail: "/the-sleeping-gypsy/thumbnail.jpg",
-  //     hero: {
-  //       small: "/the-sleeping-gypsy/hero-small.jpg",
-  //       large: "/the-sleeping-gypsy/hero-large.jpg",
-  //     },
-  //     gallery: "/the-sleeping-gypsy/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 6,
+    name: "The Sleeping Gypsy",
+    year: 1897,
+    description:
+      "The Sleeping Gypsy (French: La Bohémienne endormie) is an 1897 oil painting by French Naïve artist Henri Rousseau (1844–1910). It is a fantastical depiction of a lion musing over a sleeping woman on a moonlit night. Rousseau first exhibited the painting at the 13th Salon des Indépendants, and tried unsuccessfully to sell it to the mayor of his hometown, Laval. Instead, it entered the private collection of a Parisian charcoal merchant where it remained until 1924, when it was discovered by the art critic Louis Vauxcelles.",
+    source: "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
+    artist: {
+      image: theSleepingGypsy.artist,
+      name: "Henri Rousseau",
+    },
+    images: {
+      thumbnail: theSleepingGypsy.thumbnail,
+      hero: {
+        small: theSleepingGypsy.heroSmall,
+        large: theSleepingGypsy.heroLarge,
+      },
+      gallery: theSleepingGypsy.gallery,
+    },
+  },
   // {
   //   id: 7,
   //   name: "Van Gogh Self-portrait",
