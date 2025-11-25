@@ -12,6 +12,7 @@ import {
   theBasketOfApples,
   ladyWithAnErmine,
   theNightCafe,
+  monaLisa,
 } from "./images.js";
 
 import "./styles.css";
@@ -238,26 +239,26 @@ export const galleryData = [
       gallery: theNightCafe.gallery,
     },
   },
-  // {
-  //   id: 12,
-  //   name: "Mona Lisa",
-  //   year: 1503,
-  //   description:
-  //     "The Mona Lisa (/ˌmoʊnə ˈliːsə/; italian: La Gioconda [la dʒoˈkonda] or Monna Lisa [ˈmɔnna ˈliːza]) is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as \"the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world\". The painting's novel qualities include the subject's enigmatic expression, the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.",
-  //   source: "https://en.wikipedia.org/wiki/Mona_Lisa",
-  //   artist: {
-  //     image: "/mona-lisa/artist.jpg",
-  //     name: "Leonardo da Vinci",
-  //   },
-  //   images: {
-  //     thumbnail: "/mona-lisa/thumbnail.jpg",
-  //     hero: {
-  //       small: "/mona-lisa/hero-small.jpg",
-  //       large: "/mona-lisa/hero-large.jpg",
-  //     },
-  //     gallery: "/mona-lisa/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 12,
+    name: "Mona Lisa",
+    year: 1503,
+    description:
+      "The Mona Lisa (/ˌmoʊnə ˈliːsə/; italian: La Gioconda [la dʒoˈkonda] or Monna Lisa [ˈmɔnna ˈliːza]) is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as \"the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world\". The painting's novel qualities include the subject's enigmatic expression, the monumentality of the composition, the subtle modelling of forms, and the atmospheric illusionism.",
+    source: "https://en.wikipedia.org/wiki/Mona_Lisa",
+    artist: {
+      image: monaLisa.artist,
+      name: "Leonardo da Vinci",
+    },
+    images: {
+      thumbnail: monaLisa.thumbnail,
+      hero: {
+        small: monaLisa.heroSmall,
+        large: monaLisa.heroLarge,
+      },
+      gallery: monaLisa.gallery,
+    },
+  },
   // {
   //   id: 13,
   //   name: "The Swing",

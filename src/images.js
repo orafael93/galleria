@@ -151,3 +151,17 @@ export const theNightCafe = {
   heroLarge: TheNightCafeHeroLarge,
   gallery: TheNightCafeGallery,
 };
+
+import MonaLisaArtist from "../public/mona-lisa/artist.jpg";
+import MonaLisaThumbnail from "../public/mona-lisa/thumbnail.jpg";
+import MonaLisaHeroSmall from "../public/mona-lisa/hero-small.jpg";
+import MonaLisaHeroLarge from "../public/mona-lisa/hero-large.jpg";
+import MonaLisaGallery from "../public/mona-lisa/gallery.jpg";
+
+export const monaLisa = {
+  artist: MonaLisaArtist,
+  thumbnail: MonaLisaThumbnail,
+  heroSmall: MonaLisaHeroSmall,
+  heroLarge: MonaLisaHeroLarge,
+  gallery: MonaLisaGallery,
+};
