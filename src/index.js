@@ -1,6 +1,11 @@
 import { createMasonryGrid, initializeGallery } from "./masonry.js";
 import { slideshow } from "./slideshow.js";
-import { starryNight, girlWithAPearlEarring, guernica } from "./images.js";
+import {
+  starryNight,
+  girlWithAPearlEarring,
+  guernica,
+  penitentMagdalene,
+} from "./images.js";
 
 import "./styles.css";
 
@@ -65,27 +70,27 @@ export const galleryData = [
       gallery: guernica.gallery,
     },
   },
-  // {
-  //   id: 4,
-  //   name: "Penitent Magdalene",
-  //   year: 1625,
-  //   description:
-  //     "Penitent Magdalene is a painting by the Italian artist Artemisia Gentileschi. It hangs in Seville Cathedral. It has probably been in the cathedral since the late 17th century. The painting's first home was the collection of Fernando Enriquez Afan de Ribera, from 1626 to 1637. She returned to the subject later in the 1620s in Mary Magdalene as Melancholy.",
-  //   source:
-  //     "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)",
-  //   artist: {
-  //     image: "/penitent-magdalene/artist.jpg",
-  //     name: "Artemisia Gentileschi",
-  //   },
-  //   images: {
-  //     thumbnail: "/penitent-magdalene/thumbnail.jpg",
-  //     hero: {
-  //       small: "/penitent-magdalene/hero-small.jpg",
-  //       large: "/penitent-magdalene/hero-large.jpg",
-  //     },
-  //     gallery: "/penitent-magdalene/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 4,
+    name: "Penitent Magdalene",
+    year: 1625,
+    description:
+      "Penitent Magdalene is a painting by the Italian artist Artemisia Gentileschi. It hangs in Seville Cathedral. It has probably been in the cathedral since the late 17th century. The painting's first home was the collection of Fernando Enriquez Afan de Ribera, from 1626 to 1637. She returned to the subject later in the 1620s in Mary Magdalene as Melancholy.",
+    source:
+      "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)",
+    artist: {
+      image: penitentMagdalene.artist,
+      name: "Artemisia Gentileschi",
+    },
+    images: {
+      thumbnail: penitentMagdalene.thumbnail,
+      hero: {
+        small: penitentMagdalene.heroSmall,
+        large: penitentMagdalene.heroLarge,
+      },
+      gallery: penitentMagdalene.gallery,
+    },
+  },
   // {
   //   id: 5,
   //   name: "The Storm on the Sea of Galilee",

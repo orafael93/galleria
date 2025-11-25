@@ -39,3 +39,17 @@ export const guernica = {
   heroLarge: GuernicaHeroLarge,
   gallery: GuernicaGallery,
 };
+
+import PenitentMagdaleneArtist from "../public/penitent-magdalene/artist.jpg";
+import PenitentMagdaleneThumbnail from "../public/penitent-magdalene/thumbnail.jpg";
+import PenitentMagdaleneHeroSmall from "../public/penitent-magdalene/hero-small.jpg";
+import PenitentMagdaleneHeroLarge from "../public/penitent-magdalene/hero-large.jpg";
+import PenitentMagdaleneGallery from "../public/penitent-magdalene/gallery.jpg";
+
+export const penitentMagdalene = {
+  artist: PenitentMagdaleneArtist,
+  thumbnail: PenitentMagdaleneThumbnail,
+  heroSmall: PenitentMagdaleneHeroSmall,
+  heroLarge: PenitentMagdaleneHeroLarge,
+  gallery: PenitentMagdaleneGallery,
+};
