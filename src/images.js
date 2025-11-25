@@ -193,3 +193,17 @@ export const arnolfiniPortrait = {
   heroLarge: ArnolfiniPortraitHeroLarge,
   gallery: ArnolfiniPortraitGallery,
 };
+
+import TheBoyInTheRedVestArtist from "../public/the-boy-in-the-red-vest/artist.jpg";
+import TheBoyInTheRedVestThumbnail from "../public/the-boy-in-the-red-vest/thumbnail.jpg";
+import TheBoyInTheRedVestHeroSmall from "../public/the-boy-in-the-red-vest/hero-small.jpg";
+import TheBoyInTheRedVestHeroLarge from "../public/the-boy-in-the-red-vest/hero-large.jpg";
+import TheBoyInTheRedVestGallery from "../public/the-boy-in-the-red-vest/gallery.jpg";
+
+export const theBoyInTheRedVest = {
+  artist: TheBoyInTheRedVestArtist,
+  thumbnail: TheBoyInTheRedVestThumbnail,
+  heroSmall: TheBoyInTheRedVestHeroSmall,
+  heroLarge: TheBoyInTheRedVestHeroLarge,
+  gallery: TheBoyInTheRedVestGallery,
+};

@@ -15,6 +15,7 @@ import {
   monaLisa,
   theSwing,
   arnolfiniPortrait,
+  theBoyInTheRedVest,
 } from "./images.js";
 
 import "./styles.css";
@@ -301,26 +302,26 @@ export const galleryData = [
       gallery: arnolfiniPortrait.gallery,
     },
   },
-  // {
-  //   id: 15,
-  //   name: "The Boy in the Red Vest",
-  //   year: 1889,
-  //   description:
-  //     "Cézanne painted four oil portraits of this Italian boy in the red vest, all in different poses, which allowed him to study the relationship between the figure and space. The most famous of the four, and the one commonly referred to by this title, is the one which depicts the boy in a melancholic seated pose with his elbow on a table and his head cradled in his hand. It is currently held in Zürich, Switzerland. The other three portraits, of different poses, are in museums in the US",
-  //   source: "https://en.wikipedia.org/wiki/The_Boy_in_the_Red_Vest",
-  //   artist: {
-  //     image: "/the-boy-in-the-red-vest/artist.jpg",
-  //     name: "Paul Cézanne",
-  //   },
-  //   images: {
-  //     thumbnail: "/the-boy-in-the-red-vest/thumbnail.jpg",
-  //     hero: {
-  //       small: "/the-boy-in-the-red-vest/hero-small.jpg",
-  //       large: "/the-boy-in-the-red-vest/hero-large.jpg",
-  //     },
-  //     gallery: "/the-boy-in-the-red-vest/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 15,
+    name: "The Boy in the Red Vest",
+    year: 1889,
+    description:
+      "Cézanne painted four oil portraits of this Italian boy in the red vest, all in different poses, which allowed him to study the relationship between the figure and space. The most famous of the four, and the one commonly referred to by this title, is the one which depicts the boy in a melancholic seated pose with his elbow on a table and his head cradled in his hand. It is currently held in Zürich, Switzerland. The other three portraits, of different poses, are in museums in the US",
+    source: "https://en.wikipedia.org/wiki/The_Boy_in_the_Red_Vest",
+    artist: {
+      image: theBoyInTheRedVest.artist,
+      name: "Paul Cézanne",
+    },
+    images: {
+      thumbnail: theBoyInTheRedVest.thumbnail,
+      hero: {
+        small: theBoyInTheRedVest.heroSmall,
+        large: theBoyInTheRedVest.heroLarge,
+      },
+      gallery: theBoyInTheRedVest.gallery,
+    },
+  },
 ];
 
 document.documentElement.dataset.active_slideshow = false;
