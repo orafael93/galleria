@@ -25,3 +25,17 @@ export const girlWithAPearlEarring = {
   heroLarge: GirlWithAPearlEarringHeroLarge,
   gallery: GirlWithAPearlEarringGallery,
 };
+
+import GuernicaArtist from "../public/guernica/artist.jpg";
+import GuernicaThumbnail from "../public/guernica/thumbnail.jpg";
+import GuernicaHeroSmall from "../public/guernica/hero-small.jpg";
+import GuernicaHeroLarge from "../public/guernica/hero-large.jpg";
+import GuernicaGallery from "../public/guernica/gallery.jpg";
+
+export const guernica = {
+  artist: GuernicaArtist,
+  thumbnail: GuernicaThumbnail,
+  heroSmall: GuernicaHeroSmall,
+  heroLarge: GuernicaHeroLarge,
+  gallery: GuernicaGallery,
+};
