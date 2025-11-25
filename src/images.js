@@ -137,3 +137,17 @@ export const ladyWithAnErmine = {
   heroLarge: LadyWithAnErmineHeroLarge,
   gallery: LadyWithAnErmineGallery,
 };
+
+import TheNightCafeArtist from "../public/the-night-cafe/artist.jpg";
+import TheNightCafeThumbnail from "../public/the-night-cafe/thumbnail.jpg";
+import TheNightCafeHeroSmall from "../public/the-night-cafe/hero-small.jpg";
+import TheNightCafeHeroLarge from "../public/the-night-cafe/hero-large.jpg";
+import TheNightCafeGallery from "../public/the-night-cafe/gallery.jpg";
+
+export const theNightCafe = {
+  artist: TheNightCafeArtist,
+  thumbnail: TheNightCafeThumbnail,
+  heroSmall: TheNightCafeHeroSmall,
+  heroLarge: TheNightCafeHeroLarge,
+  gallery: TheNightCafeGallery,
+};
