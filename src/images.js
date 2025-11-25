@@ -165,3 +165,17 @@ export const monaLisa = {
   heroLarge: MonaLisaHeroLarge,
   gallery: MonaLisaGallery,
 };
+
+import TheSwingArtist from "../public/the-swing/artist.jpg";
+import TheSwingThumbnail from "../public/the-swing/thumbnail.jpg";
+import TheSwingHeroSmall from "../public/the-swing/hero-small.jpg";
+import TheSwingHeroLarge from "../public/the-swing/hero-large.jpg";
+import TheSwingGallery from "../public/the-swing/gallery.jpg";
+
+export const theSwing = {
+  artist: TheSwingArtist,
+  thumbnail: TheSwingThumbnail,
+  heroSmall: TheSwingHeroSmall,
+  heroLarge: TheSwingHeroLarge,
+  gallery: TheSwingGallery,
+};

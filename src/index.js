@@ -13,6 +13,7 @@ import {
   ladyWithAnErmine,
   theNightCafe,
   monaLisa,
+  theSwing,
 } from "./images.js";
 
 import "./styles.css";
@@ -259,26 +260,26 @@ export const galleryData = [
       gallery: monaLisa.gallery,
     },
   },
-  // {
-  //   id: 13,
-  //   name: "The Swing",
-  //   year: 1767,
-  //   description:
-  //     "The painting depicts an elegant young woman on a swing. A smiling young man, hiding in the bushes on the left, watches her from a vantage point that allows him to see up into her billowing dress, where his arm is pointed with hat in hand. A smiling older man, who is nearly hidden in the shadows on the right, propels the swing with a pair of ropes. The older man appears to be unaware of the young man. As the young lady swings high, she throws her left leg up, allowing her dainty shoe to fly through the air.",
-  //   source: "https://en.wikipedia.org/wiki/The_Swing_(Fragonard)",
-  //   artist: {
-  //     image: "/the-swing/artist.jpg",
-  //     name: "Jean-Honoré Fragonard",
-  //   },
-  //   images: {
-  //     thumbnail: "/the-swing/thumbnail.jpg",
-  //     hero: {
-  //       small: "/the-swing/hero-small.jpg",
-  //       large: "/the-swing/hero-large.jpg",
-  //     },
-  //     gallery: "/the-swing/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 13,
+    name: "The Swing",
+    year: 1767,
+    description:
+      "The painting depicts an elegant young woman on a swing. A smiling young man, hiding in the bushes on the left, watches her from a vantage point that allows him to see up into her billowing dress, where his arm is pointed with hat in hand. A smiling older man, who is nearly hidden in the shadows on the right, propels the swing with a pair of ropes. The older man appears to be unaware of the young man. As the young lady swings high, she throws her left leg up, allowing her dainty shoe to fly through the air.",
+    source: "https://en.wikipedia.org/wiki/The_Swing_(Fragonard)",
+    artist: {
+      image: theSwing.artist,
+      name: "Jean-Honoré Fragonard",
+    },
+    images: {
+      thumbnail: theSwing.thumbnail,
+      hero: {
+        small: theSwing.heroSmall,
+        large: theSwing.heroLarge,
+      },
+      gallery: theSwing.gallery,
+    },
+  },
   // {
   //   id: 14,
   //   name: "Arnolfini Portrait",
