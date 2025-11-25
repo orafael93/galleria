@@ -123,3 +123,17 @@ export const theBasketOfApples = {
   heroLarge: TheBasketOfApplesHeroLarge,
   gallery: TheBasketOfApplesGallery,
 };
+
+import LadyWithAnErmineArtist from "../public/lady-with-an-ermine/artist.jpg";
+import LadyWithAnErmineThumbnail from "../public/lady-with-an-ermine/thumbnail.jpg";
+import LadyWithAnErmineHeroSmall from "../public/lady-with-an-ermine/hero-small.jpg";
+import LadyWithAnErmineHeroLarge from "../public/lady-with-an-ermine/hero-large.jpg";
+import LadyWithAnErmineGallery from "../public/lady-with-an-ermine/gallery.jpg";
+
+export const ladyWithAnErmine = {
+  artist: LadyWithAnErmineArtist,
+  thumbnail: LadyWithAnErmineThumbnail,
+  heroSmall: LadyWithAnErmineHeroSmall,
+  heroLarge: LadyWithAnErmineHeroLarge,
+  gallery: LadyWithAnErmineGallery,
+};
