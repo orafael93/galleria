@@ -53,3 +53,17 @@ export const penitentMagdalene = {
   heroLarge: PenitentMagdaleneHeroLarge,
   gallery: PenitentMagdaleneGallery,
 };
+
+import TheStormOnTheSeaOfGalileeArtist from "../public/the-storm-on-the-sea-of-galilee/artist.jpg";
+import TheStormOnTheSeaOfGalileeThumbnail from "../public/the-storm-on-the-sea-of-galilee/thumbnail.jpg";
+import TheStormOnTheSeaOfGalileeHeroSmall from "../public/the-storm-on-the-sea-of-galilee/hero-small.jpg";
+import TheStormOnTheSeaOfGalileeHeroLarge from "../public/the-storm-on-the-sea-of-galilee/hero-large.jpg";
+import TheStormOnTheSeaOfGalileeGallery from "../public/the-storm-on-the-sea-of-galilee/gallery.jpg";
+
+export const theStormOnTheSeaOfGalilee = {
+  artist: TheStormOnTheSeaOfGalileeArtist,
+  thumbnail: TheStormOnTheSeaOfGalileeThumbnail,
+  heroSmall: TheStormOnTheSeaOfGalileeHeroSmall,
+  heroLarge: TheStormOnTheSeaOfGalileeHeroLarge,
+  gallery: TheStormOnTheSeaOfGalileeGallery,
+};

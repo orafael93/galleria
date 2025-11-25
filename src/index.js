@@ -5,6 +5,7 @@ import {
   girlWithAPearlEarring,
   guernica,
   penitentMagdalene,
+  theStormOnTheSeaOfGalilee,
 } from "./images.js";
 
 import "./styles.css";
@@ -91,26 +92,26 @@ export const galleryData = [
       gallery: penitentMagdalene.gallery,
     },
   },
-  // {
-  //   id: 5,
-  //   name: "The Storm on the Sea of Galilee",
-  //   year: 1633,
-  //   description:
-  //     "The painting, in vertical format, shows a close-up view of Christ's disciples struggling frantically against the heavy storm to regain control of their fishing boat. A huge wave beats the bow and rips the sail. One of the disciples is seen vomiting over the side. Another one, looking directly out at the viewer, is a self-portrait of the artist. Only Christ, depicted on the right, remains calm.",
-  //   source: "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
-  //   artist: {
-  //     image: "/the-storm-on-the-sea-of-galilee/artist.jpg",
-  //     name: "Rembrandt",
-  //   },
-  //   images: {
-  //     thumbnail: "/the-storm-on-the-sea-of-galilee/thumbnail.jpg",
-  //     hero: {
-  //       small: "/the-storm-on-the-sea-of-galilee/hero-small.jpg",
-  //       large: "/the-storm-on-the-sea-of-galilee/hero-large.jpg",
-  //     },
-  //     gallery: "/the-storm-on-the-sea-of-galilee/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 5,
+    name: "The Storm on the Sea of Galilee",
+    year: 1633,
+    description:
+      "The painting, in vertical format, shows a close-up view of Christ's disciples struggling frantically against the heavy storm to regain control of their fishing boat. A huge wave beats the bow and rips the sail. One of the disciples is seen vomiting over the side. Another one, looking directly out at the viewer, is a self-portrait of the artist. Only Christ, depicted on the right, remains calm.",
+    source: "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
+    artist: {
+      image: theStormOnTheSeaOfGalilee.artist,
+      name: "Rembrandt",
+    },
+    images: {
+      thumbnail: theStormOnTheSeaOfGalilee.thumbnail,
+      hero: {
+        small: theStormOnTheSeaOfGalilee.heroSmall,
+        large: theStormOnTheSeaOfGalilee.heroLarge,
+      },
+      gallery: theStormOnTheSeaOfGalilee.gallery,
+    },
+  },
   // {
   //   id: 6,
   //   name: "The Sleeping Gypsy",
