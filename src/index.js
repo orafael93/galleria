@@ -9,6 +9,7 @@ import {
   theSleepingGypsy,
   vanGoghSelfPortrait,
   theGreatWaveOffKanagawa,
+  theBasketOfApples,
 } from "./images.js";
 
 import "./styles.css";
@@ -175,26 +176,26 @@ export const galleryData = [
       gallery: theGreatWaveOffKanagawa.gallery,
     },
   },
-  // {
-  //   id: 9,
-  //   name: "The Basket of Apples",
-  //   year: 1893,
-  //   description:
-  //     "The Basket of Apples (French: Le panier de pommes) is a still life oil painting by French artist Paul Cézanne, which he created c. 1893. The painting is particularly remarkable for its creative composition, which rejected realistic representation in favour of distorting objects to create multiple perspectives. This approach eventually influenced other art movements, including Fauvism and Cubism. It belongs to the Helen Birch Bartlett Memorial Collection of the Art Institute of Chicago.",
-  //   source: "https://en.wikipedia.org/wiki/The_Basket_of_Apples",
-  //   artist: {
-  //     image: "/the-basket-of-apples/artist.jpg",
-  //     name: "Paul Cézanne",
-  //   },
-  //   images: {
-  //     thumbnail: "/the-basket-of-apples/thumbnail.jpg",
-  //     hero: {
-  //       small: "/the-basket-of-apples/hero-small.jpg",
-  //       large: "/the-basket-of-apples/hero-large.jpg",
-  //     },
-  //     gallery: "/the-basket-of-apples/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 9,
+    name: "The Basket of Apples",
+    year: 1893,
+    description:
+      "The Basket of Apples (French: Le panier de pommes) is a still life oil painting by French artist Paul Cézanne, which he created c. 1893. The painting is particularly remarkable for its creative composition, which rejected realistic representation in favour of distorting objects to create multiple perspectives. This approach eventually influenced other art movements, including Fauvism and Cubism. It belongs to the Helen Birch Bartlett Memorial Collection of the Art Institute of Chicago.",
+    source: "https://en.wikipedia.org/wiki/The_Basket_of_Apples",
+    artist: {
+      image: theBasketOfApples.artist,
+      name: "Paul Cézanne",
+    },
+    images: {
+      thumbnail: theBasketOfApples.thumbnail,
+      hero: {
+        small: theBasketOfApples.heroSmall,
+        large: theBasketOfApples.heroLarge,
+      },
+      gallery: theBasketOfApples.gallery,
+    },
+  },
   // {
   //   id: 10,
   //   name: "Lady with an Ermine",

@@ -109,3 +109,17 @@ export const theGreatWaveOffKanagawa = {
   heroLarge: TheGreatWaveOffKanagawaHeroLarge,
   gallery: TheGreatWaveOffKanagawaGallery,
 };
+
+import TheBasketOfApplesArtist from "../public/the-basket-of-apples/artist.jpg";
+import TheBasketOfApplesThumbnail from "../public/the-basket-of-apples/thumbnail.jpg";
+import TheBasketOfApplesHeroSmall from "../public/the-basket-of-apples/hero-small.jpg";
+import TheBasketOfApplesHeroLarge from "../public/the-basket-of-apples/hero-large.jpg";
+import TheBasketOfApplesGallery from "../public/the-basket-of-apples/gallery.jpg";
+
+export const theBasketOfApples = {
+  artist: TheBasketOfApplesArtist,
+  thumbnail: TheBasketOfApplesThumbnail,
+  heroSmall: TheBasketOfApplesHeroSmall,
+  heroLarge: TheBasketOfApplesHeroLarge,
+  gallery: TheBasketOfApplesGallery,
+};
