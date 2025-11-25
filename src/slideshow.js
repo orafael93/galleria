@@ -1,4 +1,54 @@
-import { galleryData } from "./script.js";
+import { galleryData } from "./index.js";
+
+const prevArrow = `
+  <svg
+            width="26"
+            height="24"
+            viewBox="0 0 26 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="prev-arrow"
+          >
+            <path
+              d="M3.6275 12.1122L24.1656 22.3817V1.84265L3.6275 12.1122Z"
+              stroke="black"
+              stroke-width="2"
+            />
+            <rect
+              x="-0.371478"
+              y="0.371478"
+              width="0.742956"
+              height="23.0316"
+              transform="matrix(-1 0 0 1 0.742939 0)"
+              stroke="black"
+              stroke-width="0.742956"
+            />
+          </svg>
+`;
+
+const nextArrow = `
+  <svg
+    width="26"
+    height="24"
+    viewBox="0 0 26 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="next-arrow">
+    <path
+      d="M21.5381 12.1122L1 22.3817V1.84265L21.5381 12.1122Z"
+      stroke="black"
+      stroke-width="2"
+    />
+    <rect
+      x="24.0512"
+      y="0.371478"
+      width="0.742956"
+      height="23.0316"
+      stroke="black"
+      stroke-width="0.742956"
+    />
+  </svg>
+`;
 
 class HandleSlideShow {
   constructor() {
@@ -7,6 +57,7 @@ class HandleSlideShow {
     this.intervalTimerId = null;
 
     this.createOverlayContent();
+    this.createFooterContent();
   }
 
   canShowSlideshow() {
@@ -106,13 +157,13 @@ class HandleSlideShow {
   handleLeftArrowState() {
     const prevArrow = document.querySelector(".prev-arrow");
 
-    if (this.currentArt.id === 1) {
-      prevArrow.classList.add("disabled");
-    }
+    // if (this.currentArt.id === 1) {
+    //   prevArrow.classList.add("disabled");
+    // }
 
-    if (this.currentArt.id !== 1 && prevArrow.classList.contains("disabled")) {
-      prevArrow.classList.remove("disabled");
-    }
+    // if (this.currentArt.id !== 1 && prevArrow.classList.contains("disabled")) {
+    //   prevArrow.classList.remove("disabled");
+    // }
   }
 
   handleNavigateBetweenSlideshows() {
@@ -187,6 +238,43 @@ class HandleSlideShow {
     artContent.appendChild(art);
 
     container.insertAdjacentElement("afterend", overlayWrapper);
+  }
+
+  createFooterContent() {
+    const container = document.querySelector(".overlay");
+
+    const footerSlideshow = document.createElement("footer");
+    footerSlideshow.classList.add("footer-slideshow");
+
+    const progressBar = document.createElement("div");
+    progressBar.classList.add("progress-bar");
+
+    const currentProgress = document.createElement("span");
+    currentProgress.classList.add("current-progress");
+    progressBar.appendChild(currentProgress);
+
+    const footerContent = document.createElement("div");
+    footerContent.classList.add("footer-content");
+    const currentSlideArt = document.createElement("div");
+    currentSlideArt.classList.add("current-slide-art");
+    const slideArtText = document.createElement("p");
+    const slideArtSpan = document.createElement("span");
+
+    currentSlideArt.appendChild(slideArtText);
+    currentSlideArt.appendChild(slideArtSpan);
+
+    const nextPrevArrows = document.createElement("div");
+    nextPrevArrows.classList.add("next-prev-arrows");
+    nextPrevArrows.innerHTML += prevArrow;
+    nextPrevArrows.innerHTML += nextArrow;
+
+    footerContent.appendChild(currentSlideArt);
+    footerContent.appendChild(nextPrevArrows);
+
+    footerSlideshow.appendChild(progressBar);
+    footerSlideshow.appendChild(footerContent);
+
+    container.insertAdjacentElement("afterend", footerSlideshow);
   }
 }
 

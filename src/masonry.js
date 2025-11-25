@@ -1,4 +1,4 @@
-import { galleryData } from "./script.js";
+import { galleryData } from "./index.js";
 import { slideshow } from "./slideshow.js";
 
 const gridContainer = document.querySelector(".images-wrapper");
