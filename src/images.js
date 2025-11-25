@@ -95,3 +95,17 @@ export const vanGoghSelfPortrait = {
   heroLarge: VanGoghSelfPortraitHeroLarge,
   gallery: VanGoghSelfPortraitGallery,
 };
+
+import TheGreatWaveOffKanagawaArtist from "../public/the-great-wave-off-kanagawa/artist.jpg";
+import TheGreatWaveOffKanagawaThumbnail from "../public/the-great-wave-off-kanagawa/thumbnail.jpg";
+import TheGreatWaveOffKanagawaHeroSmall from "../public/the-great-wave-off-kanagawa/hero-small.jpg";
+import TheGreatWaveOffKanagawaHeroLarge from "../public/the-great-wave-off-kanagawa/hero-large.jpg";
+import TheGreatWaveOffKanagawaGallery from "../public/the-great-wave-off-kanagawa/gallery.jpg";
+
+export const theGreatWaveOffKanagawa = {
+  artist: TheGreatWaveOffKanagawaArtist,
+  thumbnail: TheGreatWaveOffKanagawaThumbnail,
+  heroSmall: TheGreatWaveOffKanagawaHeroSmall,
+  heroLarge: TheGreatWaveOffKanagawaHeroLarge,
+  gallery: TheGreatWaveOffKanagawaGallery,
+};

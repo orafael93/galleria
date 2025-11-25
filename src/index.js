@@ -8,6 +8,7 @@ import {
   theStormOnTheSeaOfGalilee,
   theSleepingGypsy,
   vanGoghSelfPortrait,
+  theGreatWaveOffKanagawa,
 } from "./images.js";
 
 import "./styles.css";
@@ -154,26 +155,26 @@ export const galleryData = [
       gallery: vanGoghSelfPortrait.gallery,
     },
   },
-  // {
-  //   id: 8,
-  //   name: "The Great Wave off Kanagawa",
-  //   year: 1831,
-  //   description:
-  //     'The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit. "Under the Wave off Kanagawa"), also known as The Great Wave or simply The Wave, is a woodblock print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late Edo period as the first print in Hokusai\'s series Thirty-six Views of Mount Fuji. The image depicts an enormous wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) while Mount Fuji rises in the background.',
-  //   source: "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
-  //   artist: {
-  //     image: "/the-great-wave-off-kanagawa/artist.jpg",
-  //     name: "Hokusai",
-  //   },
-  //   images: {
-  //     thumbnail: "/the-great-wave-off-kanagawa/thumbnail.jpg",
-  //     hero: {
-  //       small: "/the-great-wave-off-kanagawa/hero-small.jpg",
-  //       large: "/the-great-wave-off-kanagawa/hero-large.jpg",
-  //     },
-  //     gallery: "/the-great-wave-off-kanagawa/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 8,
+    name: "The Great Wave off Kanagawa",
+    year: 1831,
+    description:
+      'The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit. "Under the Wave off Kanagawa"), also known as The Great Wave or simply The Wave, is a woodblock print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late Edo period as the first print in Hokusai\'s series Thirty-six Views of Mount Fuji. The image depicts an enormous wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) while Mount Fuji rises in the background.',
+    source: "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
+    artist: {
+      image: theGreatWaveOffKanagawa.artist,
+      name: "Hokusai",
+    },
+    images: {
+      thumbnail: theGreatWaveOffKanagawa.thumbnail,
+      hero: {
+        small: theGreatWaveOffKanagawa.heroSmall,
+        large: theGreatWaveOffKanagawa.heroLarge,
+      },
+      gallery: theGreatWaveOffKanagawa.gallery,
+    },
+  },
   // {
   //   id: 9,
   //   name: "The Basket of Apples",
