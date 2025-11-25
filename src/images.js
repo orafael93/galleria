@@ -81,3 +81,17 @@ export const theSleepingGypsy = {
   heroLarge: TheSleepingGypsyHeroLarge,
   gallery: TheSleepingGypsyGallery,
 };
+
+import VanGoghSelfPortraitArtist from "../public/van-gogh-self-portrait/artist.jpg";
+import VanGoghSelfPortraitThumbnail from "../public/van-gogh-self-portrait/thumbnail.jpg";
+import VanGoghSelfPortraitHeroSmall from "../public/van-gogh-self-portrait/hero-small.jpg";
+import VanGoghSelfPortraitHeroLarge from "../public/van-gogh-self-portrait/hero-large.jpg";
+import VanGoghSelfPortraitGallery from "../public/van-gogh-self-portrait/gallery.jpg";
+
+export const vanGoghSelfPortrait = {
+  artist: VanGoghSelfPortraitArtist,
+  thumbnail: VanGoghSelfPortraitThumbnail,
+  heroSmall: VanGoghSelfPortraitHeroSmall,
+  heroLarge: VanGoghSelfPortraitHeroLarge,
+  gallery: VanGoghSelfPortraitGallery,
+};

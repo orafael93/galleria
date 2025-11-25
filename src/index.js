@@ -7,6 +7,7 @@ import {
   penitentMagdalene,
   theStormOnTheSeaOfGalilee,
   theSleepingGypsy,
+  vanGoghSelfPortrait,
 } from "./images.js";
 
 import "./styles.css";
@@ -133,26 +134,26 @@ export const galleryData = [
       gallery: theSleepingGypsy.gallery,
     },
   },
-  // {
-  //   id: 7,
-  //   name: "Van Gogh Self-portrait",
-  //   year: 1889,
-  //   description:
-  //     'This self-portrait was one of about 32 produced over a 10-year period, and these were an important part of his work as a painter; he painted himself because he often lacked the money to pay for models. He took the painting with him to Auvers-sur-Oise, near Paris, where he showed it to Dr. Paul Gachet, who thought it was "absolutely fanatical". Art historians are divided as to whether this painting or Self-portrait without beard is Van Gogh\'s final self-portrait. The art historians Ingo F. Walther and Jan Hulsker consider this to be the last.',
-  //   source: "https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_(1889)",
-  //   artist: {
-  //     image: "/van-gogh-self-portrait/artist.jpg",
-  //     name: "Vincent Van Gogh",
-  //   },
-  //   images: {
-  //     thumbnail: "/van-gogh-self-portrait/thumbnail.jpg",
-  //     hero: {
-  //       small: "/van-gogh-self-portrait/hero-small.jpg",
-  //       large: "/van-gogh-self-portrait/hero-large.jpg",
-  //     },
-  //     gallery: "/van-gogh-self-portrait/gallery.jpg",
-  //   },
-  // },
+  {
+    id: 7,
+    name: "Van Gogh Self-portrait",
+    year: 1889,
+    description:
+      'This self-portrait was one of about 32 produced over a 10-year period, and these were an important part of his work as a painter; he painted himself because he often lacked the money to pay for models. He took the painting with him to Auvers-sur-Oise, near Paris, where he showed it to Dr. Paul Gachet, who thought it was "absolutely fanatical". Art historians are divided as to whether this painting or Self-portrait without beard is Van Gogh\'s final self-portrait. The art historians Ingo F. Walther and Jan Hulsker consider this to be the last.',
+    source: "https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_(1889)",
+    artist: {
+      image: vanGoghSelfPortrait.artist,
+      name: "Vincent Van Gogh",
+    },
+    images: {
+      thumbnail: vanGoghSelfPortrait.thumbnail,
+      hero: {
+        small: vanGoghSelfPortrait.heroSmall,
+        large: vanGoghSelfPortrait.heroLarge,
+      },
+      gallery: vanGoghSelfPortrait.gallery,
+    },
+  },
   // {
   //   id: 8,
   //   name: "The Great Wave off Kanagawa",
