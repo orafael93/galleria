@@ -2,28 +2,27 @@ import { galleryData } from "./index.js";
 
 const prevArrow = `
   <svg
-            width="26"
-            height="24"
-            viewBox="0 0 26 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            class="prev-arrow"
-          >
-            <path
-              d="M3.6275 12.1122L24.1656 22.3817V1.84265L3.6275 12.1122Z"
-              stroke="black"
-              stroke-width="2"
-            />
-            <rect
-              x="-0.371478"
-              y="0.371478"
-              width="0.742956"
-              height="23.0316"
-              transform="matrix(-1 0 0 1 0.742939 0)"
-              stroke="black"
-              stroke-width="0.742956"
-            />
-          </svg>
+    width="26"
+    height="24"
+    viewBox="0 0 26 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="prev-arrow">
+      <path
+        d="M3.6275 12.1122L24.1656 22.3817V1.84265L3.6275 12.1122Z"
+        stroke="black"
+        stroke-width="2"
+      />
+      <rect
+        x="-0.371478"
+        y="0.371478"
+        width="0.742956"
+        height="23.0316"
+        transform="matrix(-1 0 0 1 0.742939 0)"
+        stroke="black"
+        stroke-width="0.742956"
+      />
+  </svg>
 `;
 
 const nextArrow = `
@@ -34,19 +33,19 @@ const nextArrow = `
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     class="next-arrow">
-    <path
-      d="M21.5381 12.1122L1 22.3817V1.84265L21.5381 12.1122Z"
-      stroke="black"
-      stroke-width="2"
-    />
-    <rect
-      x="24.0512"
-      y="0.371478"
-      width="0.742956"
-      height="23.0316"
-      stroke="black"
-      stroke-width="0.742956"
-    />
+      <path
+        d="M21.5381 12.1122L1 22.3817V1.84265L21.5381 12.1122Z"
+        stroke="black"
+        stroke-width="2"
+      />
+      <rect
+        x="24.0512"
+        y="0.371478"
+        width="0.742956"
+        height="23.0316"
+        stroke="black"
+        stroke-width="0.742956"
+      />
   </svg>
 `;
 
@@ -55,6 +54,10 @@ class HandleSlideShow {
     this.currentArt = null;
     this.slideshowTimer = 0;
     this.intervalTimerId = null;
+    this.artProgress = {
+      art: null,
+      progress: 0,
+    };
 
     this.createOverlayContent();
     this.createFooterContent();
@@ -78,20 +81,44 @@ class HandleSlideShow {
     return document.documentElement.dataset.active_slideshow === "true";
   }
 
+  nextSlide(currentSlideIndex) {
+    const nextGallery = galleryData[currentSlideIndex + 1];
+
+    if (nextGallery) {
+      this.clearArtProgress();
+      this.updateArt(nextGallery);
+    }
+  }
+
+  clearArtProgress() {
+    const progressBar = document.querySelector(".progress-bar");
+    const currentProgress = progressBar.querySelector(".current-progress");
+    currentProgress.removeAttribute("style");
+
+    if (this.artProgress.art) {
+      this.artProgress.art = null;
+    }
+
+    if (this.artProgress.progress) {
+      this.artProgress.progress = 0;
+    }
+
+    if (this.intervalTimerId) {
+      clearInterval(this.intervalTimerId);
+    }
+  }
+
   startSlideshow(art) {
     if (this.canShowSlideshow()) {
       this.updateArt(art);
       this.handleShowGalleryArt(art);
-
-      this.intervalTimerId = setInterval(() => {
-        this.slideshowTimer += 1;
-      }, 1000);
 
       return;
     }
 
     if (this.intervalTimerId) {
       clearInterval(this.intervalTimerId);
+      this.clearArtProgress();
     }
   }
 
@@ -109,8 +136,37 @@ class HandleSlideShow {
     });
   }
 
+  startSlideshowProgress(art) {
+    const progressBar = document.querySelector(".progress-bar");
+    const currentProgress = progressBar.querySelector(".current-progress");
+
+    this.artProgress.art = art;
+    this.artProgress.progress = currentProgress.getBoundingClientRect().width;
+
+    this.intervalTimerId = setInterval(() => {
+      this.artProgress.progress += 0.1;
+      currentProgress.style.width = `${this.artProgress.progress}%`;
+
+      const canStopCounter =
+        currentProgress.getBoundingClientRect().width >=
+        progressBar.getBoundingClientRect().width;
+
+      const currentGalleryIndex = galleryData.findIndex(
+        (currentArt) => currentArt.id === art.id
+      );
+
+      if (canStopCounter) {
+        clearInterval(this.intervalTimerId);
+        this.nextSlide(currentGalleryIndex);
+      }
+    }, 10);
+  }
+
   updateArt(art) {
     this.currentArt = art;
+
+    this.clearArtProgress();
+    this.startSlideshowProgress(this.currentArt);
 
     const mainImage = document.querySelector(".main-image");
 
@@ -142,7 +198,7 @@ class HandleSlideShow {
     currentSlideArtName.textContent = art.name;
     currentSlideArtistName.textContent = art.artist.name;
 
-    this.handleLeftArrowState(art);
+    this.handleArrowsState(art);
   }
 
   handleCloseGalleryArt() {
@@ -154,16 +210,21 @@ class HandleSlideShow {
     });
   }
 
-  handleLeftArrowState() {
+  handleArrowsState() {
     const prevArrow = document.querySelector(".prev-arrow");
+    const nextArrow = document.querySelector(".next-arrow");
 
-    // if (this.currentArt.id === 1) {
-    //   prevArrow.classList.add("disabled");
-    // }
+    if (this.currentArt.id === 1) {
+      prevArrow.classList.add("disabled");
+    }
 
-    // if (this.currentArt.id !== 1 && prevArrow.classList.contains("disabled")) {
-    //   prevArrow.classList.remove("disabled");
-    // }
+    if (this.currentArt.id !== 1 && prevArrow.classList.contains("disabled")) {
+      prevArrow.classList.remove("disabled");
+    }
+
+    if (this.currentArt.id === galleryData[galleryData.length - 1].id) {
+      nextArrow.classList.add("disabled");
+    }
   }
 
   handleNavigateBetweenSlideshows() {
@@ -175,7 +236,7 @@ class HandleSlideShow {
 
     const getCurrentArtIndex = () =>
       galleryData.findIndex(
-        (galleryDataArt) => galleryDataArt.id === slideshow.currentArt.id
+        (galleryDataArt) => galleryDataArt.id === this.currentArt.id
       );
 
     const goToPrevSlideshow = () => {
@@ -187,7 +248,7 @@ class HandleSlideShow {
           behavior: "smooth",
         });
 
-        slideshow.updateArt(prevArt);
+        this.updateArt(prevArt);
       }
     };
 
@@ -200,7 +261,7 @@ class HandleSlideShow {
           behavior: "smooth",
         });
 
-        slideshow.updateArt(nextArt);
+        this.updateArt(nextArt);
       }
     };
 
