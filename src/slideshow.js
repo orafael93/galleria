@@ -58,6 +58,7 @@ class HandleSlideShow {
       art: null,
       progress: 0,
     };
+    this.isShowingOverlay = false;
 
     this.createOverlayContent();
     this.createFooterContent();
@@ -128,7 +129,7 @@ class HandleSlideShow {
     const overlayImage = overlay.querySelector("img");
 
     viewImage.addEventListener("click", () => {
-      overlay.style.display = "block";
+      this.showOverlay();
 
       overlayImage.src = this.currentArt.images.hero.large;
 
@@ -162,8 +163,26 @@ class HandleSlideShow {
     }, 10);
   }
 
+  closeOverlay() {
+    this.isShowingOverlay = false;
+
+    const overlay = document.querySelector(".overlay");
+    overlay.style.display = "none";
+  }
+
+  showOverlay() {
+    this.isShowingOverlay = true;
+
+    const overlay = document.querySelector(".overlay");
+    overlay.style.display = "block";
+  }
+
   updateArt(art) {
     this.currentArt = art;
+
+    if (this.isShowingOverlay) {
+      this.closeOverlay();
+    }
 
     this.clearArtProgress();
     this.startSlideshowProgress(this.currentArt);
@@ -202,11 +221,10 @@ class HandleSlideShow {
   }
 
   handleCloseGalleryArt() {
-    const overlay = document.querySelector(".overlay");
     const closeArt = document.querySelector(".close-art");
 
     closeArt.addEventListener("click", () => {
-      overlay.style.display = "none";
+      this.closeOverlay();
     });
   }
 
