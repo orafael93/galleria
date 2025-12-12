@@ -22,7 +22,17 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "./public/index.html" }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public/logo.svg",
+          to: "logo.svg",
+        },
+      ],
+    }),
+  ],
   devServer: {
     static: path.resolve(__dirname, "public"),
     port: 8080,
