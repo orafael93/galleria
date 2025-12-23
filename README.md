@@ -1,26 +1,26 @@
 # galleria.
 
-Uma galeria de arte interativa e elegante, apresentando obras-primas famosas com um design moderno e responsivo.
+An interactive and elegant art gallery, featuring famous masterpieces with a modern and responsive design.
 
-## 🎬 Demonstração
+## 🎬 Demo
 
-![Demonstração do Password Generator](./project-in-action.gif)
+![Galleria Project Demo](./project-in-action.gif)
 
-## 🎨 Sobre o Projeto
+## 🎨 About the Project
 
-**galleria.** é uma aplicação web que exibe uma coleção curada de pinturas icônicas da história da arte. O projeto apresenta uma galeria em grid masonry com funcionalidade de slideshow, permitindo aos usuários explorar cada obra de arte com informações detalhadas sobre o artista, ano de criação e contexto histórico.
+**galleria.** is a web application that displays a curated collection of iconic paintings from art history. The project features a masonry grid gallery with slideshow functionality, allowing users to explore each artwork with detailed information about the artist, creation year, and historical context.
 
-## ✨ Características
+## ✨ Features
 
-- **Masonry Grid Layout**: Grid responsivo implementado com **JavaScript puro**, sem uso de bibliotecas externas
-- **Slideshow Interativo**: Navegação fluida entre obras de arte com animações suaves
-- **Design Responsivo**: Layout adaptável para diferentes tamanhos de tela
-- **Informações Detalhadas**: Cada obra inclui descrição, artista, ano e link para fonte
-- **Performance Otimizada**: Assets otimizados e bundle eficiente
+- **Masonry Grid Layout**: Responsive grid implemented with **Pure JavaScript**, without using external libraries.
+- **Interactive Slideshow**: Smooth navigation between artworks with fluid animations.
+- **Responsive Design**: Layout adaptable to different screen sizes.
+- **Detailed Information**: Each piece includes description, artist, year, and a link to the source.
+- **Optimized Performance**: Optimized assets and efficient bundle.
 
-## 🛠️ Tecnologias
+## 🛠️ Technologies
 
-Este projeto foi desenvolvido utilizando **apenas as tecnologias fundamentais do front-end**, sem frameworks ou bibliotecas de UI:
+This project was developed using **only fundamental front-end technologies**, without UI frameworks or libraries:
 
 - **HTML5**
 - **CSS3**
@@ -28,97 +28,89 @@ Este projeto foi desenvolvido utilizando **apenas as tecnologias fundamentais do
 
 ### Module Bundler
 
-O projeto utiliza **Webpack** como module bundler, configurado **manualmente** de acordo com as necessidades específicas do projeto:
+The project uses **Webpack** as a module bundler, configured **manually** to meet specific project needs:
 
-- Configuração personalizada do Webpack
-- Loaders para CSS e assets
-- HtmlWebpackPlugin para geração do HTML
-- CopyWebpackPlugin para assets estáticos
-- Webpack Dev Server para desenvolvimento local com hot reload
+- Custom Webpack configuration
+- Loaders for CSS and assets
+- HtmlWebpackPlugin for HTML generation
+- CopyWebpackPlugin for static assets
+- Webpack Dev Server for local development with hot reload
 
-## 🚀 Como Rodar o Projeto
+## 🎯 Technical Highlights
 
-### Pré-requisitos
+### Masonry Grid with Pure JavaScript
 
-- Node.js (versão 14 ou superior)
-- npm ou yarn
+I implemented the masonry grid layout **from scratch using Pure JavaScript**, avoiding libraries like Masonry.js or Isotope. This decision demonstrates a solid grasp of DOM manipulation and layout algorithms. The implementation:
 
-### Instalação
+- Dynamically calculates element positioning.
+- Automatically adapts to window resizing.
+- Optimizes vertical spacing between items.
+- Maintains high performance even with many elements.
 
-1. Clone o repositório:
+### Manual Webpack Configuration
+
+Instead of using abstraction tools like 'Create React App', I **manually configured Webpack**, including loaders and optimization settings. This approach shows my deep understanding of the front-end "under the hood" and gives me full control over the build process. The configuration includes:
+
+- Setup of loaders for different asset types.
+- Bundle size optimization.
+- Selective copying of static assets.
+- Custom development server configuration.
+
+## 🚀 How to Run the Project
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/orafael93/galleria.git
 cd galleria
 ```
 
-2. Instale as dependências:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Desenvolvimento
+### Development
 
-Para rodar o projeto em modo de desenvolvimento com hot reload:
+To run the project in development mode with hot reload:
 
 ```bash
 npm start
 ```
 
-O projeto será aberto automaticamente no navegador em `http://localhost:8080`
+The project will automatically open in your browser at `http://localhost:8080`.
 
-### Build para Produção
+### Production Build
 
-Para gerar o bundle otimizado para produção:
+To generate the optimized bundle for production:
 
 ```bash
 npm run build
 ```
 
-Os arquivos otimizados serão gerados na pasta `dist/`
+The optimized files will be generated in the `dist/` folder.
 
-## 🎯 Destaques Técnicos
+## 📝 Included Works
 
-### Masonry Grid com JavaScript Puro
-
-O layout em grid masonry foi implementado **do zero usando JavaScript puro**, sem bibliotecas como Masonry.js ou Isotope. A implementação:
-
-- Calcula dinamicamente o posicionamento dos elementos
-- Adapta-se automaticamente ao redimensionamento da janela
-- Otimiza o espaçamento vertical entre os itens
-- Mantém performance mesmo com muitos elementos
-
-### Webpack Configurado Manualmente
-
-A configuração do Webpack foi criada especificamente para este projeto, incluindo:
-
-- Configuração de loaders para diferentes tipos de assets
-- Otimização de bundle size
-- Cópia seletiva de assets estáticos
-- Configuração de dev server personalizada
-
-## 📝 Obras Incluídas
-
-A galeria apresenta 15 obras-primas, incluindo:
+The gallery features 15 masterpieces, including:
 
 - **Starry Night** - Vincent Van Gogh (1889)
 - **Girl with a Pearl Earring** - Johannes Vermeer (1665)
 - **Guernica** - Pablo Picasso (1937)
 - **Mona Lisa** - Leonardo da Vinci (1503)
-- E muitas outras...
+- And many others...
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **Rafael Pereira**
 
 - Email: orafaeldev@gmail.com
 - GitHub: [@orafael93](https://github.com/orafael93)
-
-## 📄 Licença
-
-Este projeto é privado e foi desenvolvido para fins educacionais.
-
-## 🚀 Agradecimentos
-
-- [Frontend Mentor](https://www.frontendmentor.io/) pelo desafio
